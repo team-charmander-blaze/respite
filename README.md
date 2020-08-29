@@ -19,3 +19,16 @@ Since we’re all stuck at home it provides a virtual escape from the mundane, a
 - Site provides user with two color palette display options
 - Site pulls images from art API to display to user
 - Stores favorites images / palettes into database 
+
+# DOM
+
+<img src="images/respite-DOM-WRRC.PNG" style="max-width: 550px">
+
+# ERD
+
+<img src="images/respite-erd.PNG" style="max-width: 550px">
+
+# PM Tool
+
+- [Asana](https://app.asana.com/0/1191260484271593/board)
+
