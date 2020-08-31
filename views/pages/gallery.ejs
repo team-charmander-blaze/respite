@@ -6,6 +6,20 @@
 
 <main>
   <h1>GALLERY</h1>
+
+  <div class="resultContainer">
+    <% for (info of infoArray) { %>
+      <div class="resultBox">
+        <img src="<%= info.img %>" alt="">
+        <h3><%= info.title %></h3>
+        <p><%= info.artist %></p>
+        <p><%= info.color1 %></p>
+        <p><%= info.color2 %></p>
+        <p><%= info.color3 %></p>
+        <p><%= info.color4 %></p>
+      </div>
+    <% } %>
+  </div>
   <!-- ADD ALL THE THINGS -->
 </main>
 
