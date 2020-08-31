@@ -39,7 +39,11 @@ function homePage (req, res) {
 
 
 function renderGallery (req, res) {
-
+  client.query('SELECT * FROM faves')
+    .then(sqlResult => {
+      const data = sqlResult.rows;
+      res.render('pages/gallery', {infoArray: data});
+    })
 }
 
 
@@ -82,4 +86,7 @@ function errorHandler(error, res) {
 
 // =================== Start Server ===================== //
 // wrap this in client.connect
-app.listen(PORT, () => console.log('you\'re connected'));
+client.connect()
+  .then(() => {
+    app.listen(PORT, () => console.log('you\'re connected'));
+  })
