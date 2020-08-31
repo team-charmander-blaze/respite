@@ -28,6 +28,18 @@ Since we’re all stuck at home it provides a virtual escape from the mundane, a
 
 <img src="images/respite-erd.PNG" style="max-width: 550px">
 
+# WIREFRAMES
+
+<img src="images/1-FLOW.png" style="max-width: 550px">
+
+<img src="images/2-HOME.png" style="max-width: 550px">
+
+<img src="images/3-GALLERY.png" style="max-width: 550px">
+
+<img src="images/4-FAVORITES.PNG" style="max-width: 550px">
+
+<img src="images/5-ABOUT-US.png" style="max-width: 550px">
+
 # PM Tool
 
 - [Asana](https://app.asana.com/0/1191260484271593/board)
