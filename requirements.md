@@ -32,7 +32,7 @@ It's a simple source of entertainment and escapism for anyone to enjoy.
 
 - Site provides user with two color palette display options
 - Site pulls images from art API to display to user
-- Stores previously received quotes into database
+- Stores favorite artworks into database
 
 ### Stretch
 
@@ -49,7 +49,7 @@ It's a simple source of entertainment and escapism for anyone to enjoy.
 
 - The app will be able to retrieve images from an API
 - The app will be able to retrieve colors from an API
-- The app will be able to retrieve qutoes from an API
+- The app will be able to retrieve quotes from an API
 - The site can dynamically change its colors
 
 ### Data Flow
