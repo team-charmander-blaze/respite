@@ -38,6 +38,12 @@ It's a simple source of entertainment and escapism for anyone to enjoy.
 
 - Animated fortune cookie
 - Adding a music player/music API
+- Add a gallery slideshow to desktop view
+- Delete an image from favorites
+- Functionality to save quotes along with specific favorites
+- Ability to copy color codes to clipboard
+- Mission blurb for the about us page
+- Add "hire me" to about us page
 
 ## Functional Requirements
 
