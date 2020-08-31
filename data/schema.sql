@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS faves;
+
+CREATE TABLE faves (
+  id SERIAL PRIMARY KEY, 
+  title VARCHAR(255),
+  artist VARCHAR(255),
+  img VARCHAR,
+  color1 VARCHAR(255),
+  color2 VARCHAR(255),
+  color3 VARCHAR(255),
+  color4 VARCHAR(255)
+);
