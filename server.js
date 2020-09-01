@@ -76,7 +76,7 @@ function renderGallery (req, res) {
 
       })
         .then(vals => {
-          res.render('pages/gallery', {artArray: vals});
+          res.render('pages/gallery', {dataArray: vals});
         });
     });
 }

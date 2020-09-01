@@ -7,14 +7,14 @@
 <main>
   <h1>GALLERY</h1>
 
-  <%= console.log('FRONT END ARR: ', artArray) %>
+  <%= console.log('FRONT END ARR: ', dataArray) %>
 
   <div class="resultContainer">
-    <% for (art of artArray) { %>
+    <% for (data of dataArray) { %>
       <div class="resultBox">
-        <img src="<%= art.img %>" alt="">
-        <h3><%= art.title %></h3>
-        <p><%= art.artist %></p>
+        <img src="<%= data.img %>" alt="">
+        <h3><%= data.title %></h3>
+        <p><%= data.artist %></p>
       </div>
     <% } %>
   </div>
