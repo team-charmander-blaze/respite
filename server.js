@@ -62,7 +62,6 @@ function renderGallery (req, res) {
       arrRandom.forEach(value => {
 
         const objectId = value;
-
         const apiQueryObject = `https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectId}`;
 
         promiseArr.push(superagent.get(apiQueryObject));
