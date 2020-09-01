@@ -47,7 +47,6 @@ function homePage (req, res) {
 }
 
 
-
 function renderGallery (req, res) {
 
   // --- query to get objectIds -- //
@@ -138,7 +137,7 @@ function saveInfo (req, res) {
 
 
 function renderAboutUs (req, res) {
-
+  res.render('pages/about')
 }
 
 
