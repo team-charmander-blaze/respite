@@ -130,7 +130,7 @@ function saveInfo (req, res) {
 
 
 function renderAboutUs (req, res) {
-  
+
 }
 
 
