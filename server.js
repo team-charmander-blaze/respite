@@ -160,7 +160,7 @@ function Color(colorArr) {
 function errorHandler(error, res) {
   console.log(error);
   res.status(500).render('pages/error', {
-    status: error.status,
+    status: 500,
     message: error.message
   })
 }
