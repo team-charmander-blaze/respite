@@ -6,3 +6,7 @@ body {
   background-color: beige;
   margin: 40px;
 }
+
+img {
+  max-width: 500px;
+}
