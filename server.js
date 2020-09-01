@@ -80,7 +80,8 @@ function renderGallery (req, res) {
         .then(vals => {
           res.render('pages/gallery', {dataArray: vals});
         });
-    });
+    })
+    .catch(error => errorHandler(error, res));
 }
 
 
@@ -92,7 +93,7 @@ function renderDB (req, res) {
         dataArray: dbData
       });
     })
-    // insert catch when written
+    .catch(error => errorHandler(error, res));
 }
 
 
@@ -124,6 +125,7 @@ function saveInfo (req, res) {
           res.redirect('/favorites');
         })
     })
+    .catch(error => errorHandler(error, res));
 }
 
 
@@ -156,7 +158,11 @@ function Color(colorArr) {
 
 
 function errorHandler(error, res) {
-
+  console.log(error);
+  res.status(500).render('pages/error', {
+    status: error.status,
+    message: error.message
+  })
 }
 
 
