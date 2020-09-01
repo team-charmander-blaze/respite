@@ -48,7 +48,14 @@ function renderGallery (req, res) {
 
 
 function renderDB (req, res) {
-
+  client.query('SELECT * FROM faves')
+    .then(dbResult => {
+      const dbData = dbResult.rows;
+      res.render('pages/favorites', {
+        dataArray: dbData
+      });
+    })
+    // insert catch when written
 }
 
 
