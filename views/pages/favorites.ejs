@@ -5,11 +5,29 @@
 
 
 <main>
-  <h1>FAVORITES</h1>
-  <!-- testing renderDB -->
+  <h1>FYI : FAVORITES PAGE</h1>
 
-  <%= dataArray %>
+  <input type="submit" value="FAKE Inspire to Edit Later">
+ 
+  <section class="section-card">
+    <div>
 
+      <% for (data of dataArray) { %>
+        
+        <!-- CHANDLER: INSERT artist/img/title PARTIAL (use data of dataArray in your partial)  -->
+
+        <div id="hexDiv">
+          <p><%= data.color1 %></p>
+          <p><%= data.color2 %></p>
+          <p><%= data.color3 %></p>
+          <p><%= data.color4 %></p>
+        </div>
+
+      <% } %>
+
+    </div>
+  </section>
+  
 </main>
 
 
