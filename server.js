@@ -40,12 +40,47 @@ function homePage (req, res) {
 }
 
 
+
 function renderGallery (req, res) {
-  client.query('SELECT * FROM faves')
-    .then(sqlResult => {
-      const data = sqlResult.rows;
-      res.render('pages/gallery', {infoArray: data});
-    })
+
+  // --- query to get objectIds -- //
+  const apiQuery = `https://collectionapi.metmuseum.org/public/collection/v1/search?hasImages=true&q=Impressionist`;
+
+  // -- first superagent call to get ID array -- //
+  superagent.get(apiQuery)
+
+    .then(result => {
+      const idArray = result.body.objectIDs;
+
+      let arrRandom = [];
+
+      for (let i=0; i<19; i++){
+        const randomIndex = idArray[Math.floor(Math.random()*idArray.length)];
+        arrRandom.push(randomIndex);
+      }
+
+      let promiseArr = [];
+
+      arrRandom.forEach(value => {
+
+        const objectId = value;
+        const apiQueryObject = `https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectId}`;
+
+        promiseArr.push(superagent.get(apiQueryObject));
+      });
+
+      Promise.all(promiseArr).then(values => {
+
+        return values.map(val => {
+          const constructedObj = new Image (val);
+          return constructedObj;
+        });
+
+      })
+        .then(vals => {
+          res.render('pages/gallery', {dataArray: vals});
+        });
+    });
 }
 
 
@@ -98,8 +133,12 @@ function renderAboutUs (req, res) {
 
 
 // =================== Misc. Functions ===================== //
-function Image(obj) {
+function Image(artObj) {
+  const art = artObj.body;
 
+  this.title = art.title;
+  this.artist = art.artistDisplayName;
+  this.img = art.primaryImage;
 }
 
 
@@ -126,4 +165,4 @@ function errorHandler(error, res) {
 client.connect()
   .then(() => {
     app.listen(PORT, () => console.log('you\'re connected'));
-  })
+  });
