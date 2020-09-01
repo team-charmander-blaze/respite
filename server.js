@@ -36,7 +36,14 @@ app.post('/gallery', saveInfo);
 
 // ========================== Route Handlers ============================ //
 function homePage (req, res) {
-  res.render('pages/index');
+
+  const apiQuery = `http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en`;
+
+  superagent.get(apiQuery)
+    .then(result => {
+      const quote = new Quotes(result);
+      res.render('pages/index', {data: quote});
+    });
 }
 
 
@@ -91,8 +98,8 @@ function renderDB (req, res) {
       res.render('pages/favorites', {
         dataArray: dbData
       });
-    })
-    // insert catch when written
+    });
+  // insert catch when written
 }
 
 
@@ -122,8 +129,8 @@ function saveInfo (req, res) {
           // redirect to /favorites page
           console.log('added art and colors to DB');
           res.redirect('/favorites');
-        })
-    })
+        });
+    });
 }
 
 
@@ -143,7 +150,10 @@ function Image(artObj) {
 
 
 function Quotes(obj) {
+  const quote = obj.body;
 
+  this.text = quote.quoteText;
+  this.author = quote.quoteAuthor;
 }
 
 
