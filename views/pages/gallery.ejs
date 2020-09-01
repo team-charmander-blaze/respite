@@ -14,11 +14,8 @@
     <div class="resultContainer">
 
       <% for (data of dataArray) { %>
-        <div class="resultBox">
-          <img src="<%= data.img %>" alt="">
-          <h3><%= data.title %></h3>
-          <p><%= data.artist %></p>
-        </div>
+        
+        <%- include('../layout/img') %>
         
         <form action="/gallery" method="POST" name="save">
           <input type="hidden" name="title" value="<%= data.title %>">
