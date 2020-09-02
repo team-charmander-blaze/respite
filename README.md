@@ -80,6 +80,8 @@ APIs for table | [The Metropolitan Museum of Art Collection](https://metmuseum.g
 
 # Credits / Resources
 - Some of the hamburger specific CSS credit: [Erik Terwan](https://codepen.io/erikterwan/pen/EVzeRP). However, we did a lot of manual adjusting for our app use like removing his animation, adjusting positioning, padding/margin changes, colors, etc.
+- For our social media icons, we used a free resource from [iconfinder.com](https://www.iconfinder.com/iconsets/miu-hexagon-shadow-social)
+
 
 # Getting Started
 - Create your own GitHub Repo and build out the base files seen in this repo such as the .env, .gitignore, etc.
