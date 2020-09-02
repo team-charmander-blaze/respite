@@ -1,12 +1,20 @@
 body {
   background-color: rgb(166, 231, 243);
+  font-family: 'Playfair Display', serif;
 }
 
 .section-card {
-  background-color: beige;
-  margin: 40px;
+  background-color: rgba(227, 243, 245, 0.714);
+}
+
+.bio-card {
+  background-color: rgba(227, 243, 245, 0.714);
 }
 
 img {
   max-width: 500px;
+}
+
+main {
+  width: 507px;
 }

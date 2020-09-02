@@ -1,0 +1,121 @@
+#tag p {
+  font-style: italic;
+  text-align: center;
+}
+
+#big-btn {
+  height: 60px;
+  width: 275px;
+  font-size: 1.6rem;
+  background-color: rgb(245, 251, 252);
+  border: none;
+  letter-spacing: 0.3rem;
+}
+
+.quote-card p {
+  float: right;
+}
+
+.inspire {
+  height: 35px;
+  width: 200px;
+  font-size: 1.3rem;
+  background-color: rgb(245, 251, 252);
+  border: none;
+  letter-spacing: 0.17rem;
+}
+
+.section-card {
+  width: 70%;
+  height: fit-content;
+}
+
+.img-card {
+  text-align: center;
+  width: 85%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.img-card img {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.img-card h3, .img-card > p {
+  display: inline;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+#save {
+  height: 30px;
+  width: 175px;
+  font-size: 1.2rem;
+  background-color: rgb(245, 251, 252);
+  border: none;
+  display: block;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+#imagga {
+  text-align: center;
+  margin-top: 10px;
+  padding-top: 15px;
+  background-color: rgb(245, 251, 252);
+}
+
+#hexDiv {
+  /* height: 40px;  */
+  font-family: monospace;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgb(245, 251, 252);
+}
+
+#hexDiv p {
+  font-size: 1.2rem;
+  padding: 7px 12px;
+  margin: 7px;
+}
+
+.stuff {
+  display: flex;
+  margin: 20px;
+}
+
+.bio-card {
+  width: 85%;
+  height: fit-content;
+  text-align: center;
+}
+
+.bio-card > img {
+  margin-top: 20px;
+}
+
+.stuff h2 {
+  font-size: 1.2rem;
+  font-weight: 900;
+  padding-bottom: 10px;
+  text-align: left;
+}
+
+.stuff p {
+  text-align: left;
+  padding-right: 10px;
+  letter-spacing: 0.25px;
+}
+
+.about-links img {
+  width: 45px;
+}
+
+.about-links img:first-child {
+  margin-bottom: 15px;
+}
