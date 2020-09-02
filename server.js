@@ -95,6 +95,10 @@ function renderDB (req, res) {
   client.query('SELECT * FROM faves')
     .then(dbResult => {
       const dbData = dbResult.rows;
+      console.log(dbData);
+
+      dbData.sort((a,b) => b.id - a.id);
+
       res.render('pages/favorites', {
         dataArray: dbData
       });
