@@ -4,5 +4,37 @@ nav {
 }
 
 main {
+  margin: auto;
   margin-top: 91px;
+  margin-bottom: 51px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+#logo-div {
+  margin-top: 70px;
+  margin-bottom: 45px;
+}
+
+#big-btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.inspire {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.quote-card {
+  margin-top: 20px;
+}
+
+.section-card {
+  margin: 20px 40px;
+}
+
+
+
+
