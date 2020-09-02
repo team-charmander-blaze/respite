@@ -1,3 +1,12 @@
 body {
   background-color: aquamarine;
 }
+
+.section-card {
+  background-color: beige;
+  margin: 40px;
+}
+
+img {
+  max-width: 500px;
+}

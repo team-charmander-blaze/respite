@@ -7,20 +7,27 @@
 <main>
   <h1>GALLERY</h1>
 
-  <div class="resultContainer">
-    <% for (info of infoArray) { %>
-      <div class="resultBox">
-        <img src="<%= info.img %>" alt="">
-        <h3><%= info.title %></h3>
-        <p><%= info.artist %></p>
-        <p><%= info.color1 %></p>
-        <p><%= info.color2 %></p>
-        <p><%= info.color3 %></p>
-        <p><%= info.color4 %></p>
-      </div>
-    <% } %>
-  </div>
-  <!-- ADD ALL THE THINGS -->
+  <!-- turn this into a partial? -->
+  <form action="/gallery"><input type="submit" value="Get Inspired!"></form>
+
+  <section class="gallery-card">
+    <div class="resultContainer">
+
+      <% for (data of dataArray) { %>
+        
+        <%- include('../layout/img') %>
+        
+        <form action="/gallery" method="POST" name="save">
+          <input type="hidden" name="title" value="<%= data.title %>">
+          <input type="hidden" name="artist" value="<%= data.artist %>">
+          <input type="hidden" name="img" value="<%= data.img %>">
+          <input type="submit" name="save" value="Save To Favorites">
+        </form>
+      <% } %>
+
+    </div>
+  </section>
+
 </main>
 
 

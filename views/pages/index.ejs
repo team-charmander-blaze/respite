@@ -3,10 +3,22 @@
 
 <%- include('../layout/header') %>
 
-
 <main>
   <h1>HOME PAGE</h1>
-  <!-- ADD ALL THE THINGS -->
+
+    <!-- logo placeholder image -->
+    <img src="https://via.placeholder.com/480x250" alt="">
+
+    <div id="tag">
+      <p>An Online art-crawl for design inspiration</p>
+    </div>
+
+    <form action="/gallery"><input type="submit" value="Get Inspired!"></form>
+
+    <div class="quote-card">
+      <h4><%= data.text %></h4>
+      <p><%= data.author %></p>
+    </div>
 </main>
 
 
