@@ -60,9 +60,9 @@ function renderGallery (req, res) {
 
       let arrRandom = [];
 
-      for (let i=0; i<19; i++){
-        const randomIndex = idArray[Math.floor(Math.random()*idArray.length)];
-        arrRandom.push(randomIndex);
+      while (arrRandom.length < 20){
+        const randomIndex = idArray[Math.floor(Math.random()*idArray.length) + 1];
+        if(arrRandom.indexOf(randomIndex) === -1 ) arrRandom.push(randomIndex);
       }
 
       let promiseArr = [];
