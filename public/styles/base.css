@@ -7,6 +7,10 @@ body {
   background-color: rgba(227, 243, 245, 0.714);
 }
 
+.bio-card {
+  background-color: rgba(227, 243, 245, 0.714);
+}
+
 img {
   max-width: 500px;
 }
