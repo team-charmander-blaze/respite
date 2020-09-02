@@ -1,0 +1,14 @@
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px 0px;
+}
+
+footer > img {
+  max-height: 80%;
+}
+
+footer > a {
+  align-self: flex-end;
+}
