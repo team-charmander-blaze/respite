@@ -50,7 +50,7 @@ function homePage (req, res) {
 function renderGallery (req, res) {
 
   // --- query to get objectIds -- //
-  const apiQuery = `https://collectionapi.metmuseum.org/public/collection/v1/search?hasImages=true&q=Impressionist`;
+  const apiQuery = `https://collectionapi.metmuseum.org/public/collection/v1/search?medium=Paintings&q=Impressionism`;
 
   // -- first superagent call to get ID array -- //
   superagent.get(apiQuery)
