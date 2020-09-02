@@ -89,3 +89,4 @@ APIs for table | [The Metropolitan Museum of Art Collection](https://metmuseum.g
 - Create the Server, Database and Schema table
 - Deploy the site somewhere, like Heroku
 - Use the APIs listed in Architecture
+- Used this [Google Font](https://fonts.google.com/specimen/Playfair+Display?query=playfai&sidebar.open=true&selection.family=Playfair+Display#license) by Claus Sorensen
