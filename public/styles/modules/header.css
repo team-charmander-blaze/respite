@@ -8,8 +8,16 @@ header {
 } 
 
 header h1 {
-  font-size: 1.7rem;
-  margin-left: 20px;
+  /* font-size: 1.7rem; */
+  /* margin-left: 20px; */
+}
+
+header h1 a img {
+  width: 35px;
+  padding: 0px;
+  margin-top: -7.5px;
+  margin-bottom: -7.5px;
+  margin-left: 25px;
 }
 
 header a {
