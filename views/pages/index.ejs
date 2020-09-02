@@ -4,20 +4,23 @@
 <%- include('../layout/header') %>
 
 <main>
-
+  <div id="logo-div">
     <!-- logo placeholder image -->
     <img src="https://via.placeholder.com/480x250" alt="">
 
     <div id="tag">
       <p>An online art-crawl for design inspiration</p>
     </div>
+  </div>
 
-    <%- include('../layout/button') %>
+  <div>
+    <form action="/gallery"><input id="big-btn"  type="submit" value="Get Inspired!"></form>
+  </div>
 
-    <div class="quote-card">
-      <h4>" <%= data.text %> "</h4>
-      <p>- <%= data.author %></p>
-    </div>
+  <div class="quote-card">
+    <h4>" <%= data.text %> "</h4>
+    <p>- <%= data.author %></p>
+  </div>
 </main>
 
 
