@@ -4,7 +4,6 @@
 <%- include('../layout/header') %>
 
 <main>
-  <h1>HOME PAGE</h1>
 
     <!-- logo placeholder image -->
     <img src="https://via.placeholder.com/480x250" alt="">
@@ -13,7 +12,7 @@
       <p>An Online art-crawl for design inspiration</p>
     </div>
 
-    <form action="/gallery"><input type="submit" value="Get Inspired!"></form>
+    <%- include('../layout/button') %>
 
     <div class="quote-card">
       <h4><%= data.text %></h4>
