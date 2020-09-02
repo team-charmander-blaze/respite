@@ -1,7 +1,7 @@
 # Project: Respite
 
 A virtual art-crawl for design inspiration  
-**Version**: 2.4.2  
+**Version**: 3.10.2  
 **Deployed URL**: https://respite.herokuapp.com/  
 
 # Team Charmander Members 
