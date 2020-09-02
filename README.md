@@ -1,13 +1,13 @@
 # Project: Respite
 
 A virtual art-crawl for design inspiration  
-**Version**: 2.4.0  
+**Version**: 2.4.2  
 **Deployed URL**: https://respite.herokuapp.com/  
 
 # Team Charmander Members 
 Tif Taylor | [GitHub](https://github.com/tiftaylor) | [LinkedIn](https://www.linkedin.com/in/tiftaylor/)   
-Chandler Puckett | [GitHub](https://github.com/chandlerpuckett) | [LinkedIn](https://www.linkedin.com/in/)   
-Jack Nelson | [GitHub](https://github.com/jnelsonjava) | [LinkedIn](https://www.linkedin.com/in/)   
+Chandler Puckett | [GitHub](https://github.com/chandlerpuckett) | [LinkedIn](https://www.linkedin.com/in/chandler-puckett/)   
+Jack Nelson | [GitHub](https://github.com/jnelsonjava) | [LinkedIn](https://www.linkedin.com/in/jnelsonjava/)   
 
 # Summary of Idea
 
@@ -46,9 +46,10 @@ Since we’re all stuck at home it provides a virtual escape from the mundane, a
     - GET: `https://api.imagga.com/v2/colors`
     - Sample Response:
       - <img src="images/imagga.png" style="width: 200px">
-  - [Quotes on Design](https://quotesondesign.com/api/)
-    - GET: `https://quotesondesign.com/wp-json/wp/v2/posts/`
+  - [Forismatic](https://forismatic.com/en/api/)
+    - GET: `http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en`
     - Sample Response:
+      - <img src="images/forismatic.jpg" style="width: 200px">
 
 # Database Schema
 The schema.sql file contains a table called `faves` which contains data points from two different APIs   
@@ -80,6 +81,8 @@ APIs for table | [The Metropolitan Museum of Art Collection](https://metmuseum.g
 
 # Credits / Resources
 - Some of the hamburger specific CSS credit: [Erik Terwan](https://codepen.io/erikterwan/pen/EVzeRP). However, we did a lot of manual adjusting for our app use like removing his animation, adjusting positioning, padding/margin changes, colors, etc.
+- For our social media icons, we used a free resource from [iconfinder.com](https://www.iconfinder.com/iconsets/miu-hexagon-shadow-social)
+
 
 # Getting Started
 - Create your own GitHub Repo and build out the base files seen in this repo such as the .env, .gitignore, etc.

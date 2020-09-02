@@ -1,36 +1,30 @@
 
 <%- include('../layout/top') %>
-
 <%- include('../layout/header') %>
 
-
 <main>
-  <h1>FYI : FAVORITES PAGE</h1>
 
-  <input type="submit" value="FAKE Inspire to Edit Later">
- 
-  <section class="section-card">
-    <div>
-
-      <% for (data of dataArray) { %>
-        
+  <%- include('../layout/button') %>
+    
+  <% for (data of dataArray) { %>
+    <section class="section-card">
+      <div>
         <%- include('../layout/img') %>
+      </div>
 
-        <div id="hexDiv">
-          <p><%= data.color1 %></p>
-          <p><%= data.color2 %></p>
-          <p><%= data.color3 %></p>
-          <p><%= data.color4 %></p>
-        </div>
+      <div id="hexDiv">
+        <p><%= data.color1 %></p>
+        <p><%= data.color2 %></p>
+        <p><%= data.color3 %></p>
+        <p><%= data.color4 %></p>
+      </div>
+    
+    </section>
+  <% } %>
+    
+  <%- include('../layout/button') %>
 
-      <% } %>
-
-    </div>
-  </section>
-  
 </main>
 
-
 <%- include('../layout/footer') %>
-
 <%- include('../layout/bottom') %>

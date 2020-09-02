@@ -50,7 +50,7 @@ function homePage (req, res) {
 function renderGallery (req, res) {
 
   // --- query to get objectIds -- //
-  const apiQuery = `https://collectionapi.metmuseum.org/public/collection/v1/search?hasImages=true&q=Impressionist`;
+  const apiQuery = `https://collectionapi.metmuseum.org/public/collection/v1/search?medium=Paintings&q=Impressionism`;
 
   // -- first superagent call to get ID array -- //
   superagent.get(apiQuery)
@@ -60,9 +60,9 @@ function renderGallery (req, res) {
 
       let arrRandom = [];
 
-      for (let i=0; i<19; i++){
-        const randomIndex = idArray[Math.floor(Math.random()*idArray.length)];
-        arrRandom.push(randomIndex);
+      while (arrRandom.length < 20){
+        const randomIndex = idArray[Math.floor(Math.random()*idArray.length) + 1];
+        if(arrRandom.indexOf(randomIndex) === -1 ) arrRandom.push(randomIndex);
       }
 
       let promiseArr = [];
@@ -95,6 +95,10 @@ function renderDB (req, res) {
   client.query('SELECT * FROM faves')
     .then(dbResult => {
       const dbData = dbResult.rows;
+
+      // sorts array to display most recent save at the top
+      dbData.sort((a,b) => b.id - a.id);
+
       res.render('pages/favorites', {
         dataArray: dbData
       });

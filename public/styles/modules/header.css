@@ -1,0 +1,144 @@
+header {
+  background-color: #303745;
+  padding: 2rem 0;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+} 
+
+header h1 {
+  font-size: 1.7rem;
+  margin-left: 20px;
+}
+
+header a {
+   color: white;
+   text-decoration: none;
+}
+
+header ul {
+  margin-right: 20px;
+  font-size: 1.4rem;
+}
+
+/* Bulk of Hamburger CSS credit: Erik Terwan: https://codepen.io/erikterwan/pen/EVzeRP || But I did a lot of manual adjusting for my app use like removing his animation, adjusting positioning to suit my app, etc. */
+
+#menuToggle
+{
+  display: block;
+  margin-right: 20px;
+  height: 27px;
+
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: darkgray;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: relative;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  top: -36px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: white;
+}
+
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  position: absolute;
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  top: 91px;
+  right: 0;
+  margin: 0;
+  opacity: 0.8;
+  
+  background: #1e2c2c;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  display: none;
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menuToggle input:checked ~ ul
+{
+  display: block;
+}
