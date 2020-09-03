@@ -13,5 +13,5 @@ $('#hexDiv').ready( () => {
 
 $('.color-sample').click((event) => {
   console.log(event.target.innerText)
-  $('body').css('background-color', event.target.innerText);
+  $('body').css('background-color', event.target.innerText).css('transition','background-color 2s ease');
 })
