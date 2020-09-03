@@ -39,6 +39,8 @@ function homePage (req, res) {
 
   const apiQuery = `http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en`;
 
+  
+
   superagent.get(apiQuery)
     .then(result => {
       console.log(result.body);
