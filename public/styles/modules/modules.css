@@ -97,18 +97,18 @@
 
 .stuff {
   display: flex;
-  margin: 20px;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .bio-card {
   width: 85%;
   height: fit-content;
   text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.bio-card > img {
-  margin-top: 20px;
-}
 
 .stuff h2 {
   font-size: 1.2rem;
@@ -124,7 +124,7 @@
 }
 
 .about-links img {
-  width: 45px;
+  min-width: 45px;
 }
 
 .about-links img:first-child {
