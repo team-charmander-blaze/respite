@@ -132,7 +132,6 @@ function saveInfo (req, res) {
       const valueArr = [title, artist, img, color1, color2, color3, color4];
       client.query(sql, valueArr)
         .then( () => {
-          // redirect to /favorites page
           console.log('added art and colors to DB');
           res.redirect('/favorites');
         })
@@ -182,7 +181,6 @@ function errorHandler(error, res) {
 
 
 // =================== Start Server ===================== //
-// wrap this in client.connect
 client.connect()
   .then(() => {
     app.listen(PORT, () => console.log('you\'re connected'));

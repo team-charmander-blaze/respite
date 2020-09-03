@@ -1,7 +1,7 @@
 # Project: Respite
 
 A virtual art-crawl for design inspiration  
-**Version**: 3.10.2  
+**Version**: 3.10.3  
 **Deployed URL**: https://respite.herokuapp.com/  
 
 # Team Charmander Members 
@@ -82,6 +82,8 @@ APIs for table | [The Metropolitan Museum of Art Collection](https://metmuseum.g
 # Credits / Resources
 - Some of the hamburger specific CSS credit: [Erik Terwan](https://codepen.io/erikterwan/pen/EVzeRP). However, we did a lot of manual adjusting for our app use like removing his animation, adjusting positioning, padding/margin changes, colors, etc.
 - For our social media icons, we used a free resource from [iconfinder.com](https://www.iconfinder.com/iconsets/miu-hexagon-shadow-social)
+- Used this [Google Font](https://fonts.google.com/specimen/Playfair+Display?query=playfai&sidebar.open=true&selection.family=Playfair+Display#license) by Claus Sorensen
+- Copyright HTML symbol: https://www.w3schools.com/html/html_symbols.asp 
 
 
 # Getting Started
@@ -89,4 +91,3 @@ APIs for table | [The Metropolitan Museum of Art Collection](https://metmuseum.g
 - Create the Server, Database and Schema table
 - Deploy the site somewhere, like Heroku
 - Use the APIs listed in Architecture
-- Used this [Google Font](https://fonts.google.com/specimen/Playfair+Display?query=playfai&sidebar.open=true&selection.family=Playfair+Display#license) by Claus Sorensen
