@@ -64,7 +64,6 @@ function homePage (req, res) {
             });
         });
     });
-
 }
 
 
