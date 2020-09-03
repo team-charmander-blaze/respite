@@ -43,7 +43,8 @@ function homePage (req, res) {
     .then(result => {
       const quote = new Quotes(result);
       res.render('pages/index', {data: quote});
-    });
+    })
+    .catch(error => errorHandler(error, res));
 }
 
 
