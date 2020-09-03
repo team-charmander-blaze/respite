@@ -39,10 +39,26 @@ function homePage (req, res) {
 
   const apiQuery = `http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en`;
 
+  
+
   superagent.get(apiQuery)
     .then(result => {
       const quote = new Quotes(result);
       res.render('pages/index', {data: quote});
+    })
+    .catch(()=> {
+      superagent.get(apiQuery)
+        .then(result => {
+          const quote = new Quotes(result);
+          res.render('pages/index', {data: quote});
+        })
+        .catch(()=>{
+          superagent.get(apiQuery)
+            .then(result => {
+              const quote = new Quotes(result);
+              res.render('pages/index', {data: quote});
+            });
+        });
     });
 }
 
@@ -50,7 +66,7 @@ function homePage (req, res) {
 function renderGallery (req, res) {
 
   // --- query to get objectIds -- //
-  const apiQuery = `https://collectionapi.metmuseum.org/public/collection/v1/search?medium=Paintings&q=Impressionism`;
+  const apiQuery = `https://collectionapi.metmuseum.org/public/collection/v1/search?departmentId=6&q=color`;
 
   // -- first superagent call to get ID array -- //
   superagent.get(apiQuery)
@@ -131,17 +147,16 @@ function saveInfo (req, res) {
       const valueArr = [title, artist, img, color1, color2, color3, color4];
       client.query(sql, valueArr)
         .then( () => {
-          // redirect to /favorites page
           console.log('added art and colors to DB');
           res.redirect('/favorites');
-        })
+        });
     })
     .catch(error => errorHandler(error, res));
 }
 
 
 function renderAboutUs (req, res) {
-  res.render('pages/about')
+  res.render('pages/about');
 }
 
 
@@ -176,12 +191,11 @@ function errorHandler(error, res) {
   res.status(500).render('pages/error', {
     status: 500,
     message: error.message
-  })
+  });
 }
 
 
 // =================== Start Server ===================== //
-// wrap this in client.connect
 client.connect()
   .then(() => {
     app.listen(PORT, () => console.log('you\'re connected'));
