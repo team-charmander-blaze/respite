@@ -39,6 +39,8 @@ function homePage (req, res) {
 
   const apiQuery = `http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en`;
 
+  
+
   superagent.get(apiQuery)
     .then(result => {
       const quote = new Quotes(result);
@@ -64,7 +66,7 @@ function homePage (req, res) {
 function renderGallery (req, res) {
 
   // --- query to get objectIds -- //
-  const apiQuery = `https://collectionapi.metmuseum.org/public/collection/v1/search?medium=Paintings&q=Impressionism`;
+  const apiQuery = `https://collectionapi.metmuseum.org/public/collection/v1/search?departmentId=6&q=color`;
 
   // -- first superagent call to get ID array -- //
   superagent.get(apiQuery)

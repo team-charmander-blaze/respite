@@ -31,10 +31,12 @@
 }
 
 .img-card {
+  font-family: helvetica;
   text-align: center;
   width: 85%;
   margin: auto;
   margin-top: 20px;
+
 }
 
 .img-card img {
@@ -50,13 +52,13 @@
 
 .img-card > p {
   font-weight: bold;
+  margin-top: 10px;
   line-height: 1.5rem;
 }
 
 .img-card h3, .img-card > p {
-  display: inline;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
   letter-spacing: 0.25px;
 }
 
