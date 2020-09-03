@@ -39,27 +39,17 @@ function homePage (req, res) {
 
   const apiQuery = `http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en`;
 
-  
-
   superagent.get(apiQuery)
     .then(result => {
       const quote = new Quotes(result);
       res.render('pages/index', {data: quote});
     })
+    // a manual quote will populate if the API gives error
     .catch(()=> {
-      superagent.get(apiQuery)
-        .then(result => {
-          const quote = new Quotes(result);
+          const quote = {text:'Catching errors like a fisherman catches fish.', author: 'Tif Taylor'};
           res.render('pages/index', {data: quote});
         })
-        .catch(()=>{
-          superagent.get(apiQuery)
-            .then(result => {
-              const quote = new Quotes(result);
-              res.render('pages/index', {data: quote});
-            });
-        });
-    });
+        .catch(error => errorHandler(error, res));
 }
 
 
