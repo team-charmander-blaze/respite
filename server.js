@@ -41,10 +41,29 @@ function homePage (req, res) {
 
   superagent.get(apiQuery)
     .then(result => {
+      console.log(result.body);
       const quote = new Quotes(result);
+      console.log(quote);
       res.render('pages/index', {data: quote});
     })
-    .catch(error => errorHandler(error, res));
+    .catch(()=> {
+      superagent.get(apiQuery)
+        .then(result => {
+          console.log(result.body);
+          const quote = new Quotes(result);
+          console.log(quote);
+          res.render('pages/index', {data: quote});
+        })
+        .catch(()=>{
+          superagent.get(apiQuery)
+            .then(result => {
+              console.log(result.body);
+              const quote = new Quotes(result);
+              console.log(quote);
+              res.render('pages/index', {data: quote});
+            });
+        });
+    });
 }
 
 
@@ -134,14 +153,14 @@ function saveInfo (req, res) {
         .then( () => {
           console.log('added art and colors to DB');
           res.redirect('/favorites');
-        })
+        });
     })
     .catch(error => errorHandler(error, res));
 }
 
 
 function renderAboutUs (req, res) {
-  res.render('pages/about')
+  res.render('pages/about');
 }
 
 
@@ -176,7 +195,7 @@ function errorHandler(error, res) {
   res.status(500).render('pages/error', {
     status: 500,
     message: error.message
-  })
+  });
 }
 
 
