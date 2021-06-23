@@ -21,7 +21,12 @@ const IMAGGA_AUTH_SECRET = process.env.IMAGGA_AUTH_SECRET;
 app.use(express.static('./public'));
 app.use(express.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
-const client = new pg.Client(DATABASE_URL);
+const client = new pg.Client({
+  connectionString: DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
+});
 client.on('error', (error) => console.error(error));
 app.use(methodOverride('_method'));
 
